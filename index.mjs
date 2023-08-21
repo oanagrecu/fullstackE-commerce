@@ -1,8 +1,12 @@
 import express from "express"
 const app = express()
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-mongoose.connect('mongodb+srv://becode_21:Mongodb.Becode_21@cluster0.76tefbp.mongodb.net/?retryWrites=true&w=majority', {
+const username_mongo = process.env.username_mongo
+const password_mongo = process.env.mongo_password
+mongoose.connect(`mongodb+srv://${username_mongo}:${password_mongo}@eshop.yo4pqlj.mongodb.net/?retryWrites=true&w=majority`, {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }).then(() => {
@@ -49,4 +53,5 @@ npm install express
 npm install --save-dev nodemon
 npm install mongoose
 npm install mongodb
+npm i dotenv
 */
