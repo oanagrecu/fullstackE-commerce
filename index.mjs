@@ -82,23 +82,23 @@ const client = new MongoClient(url);
 
         /*-------------------------------------------COLLECTION PRODUCTS--------------------------------------*/
 
-        // Use the collection "products"
-        const col2 = db.collection("products");
+    //    // Use the collection "products"
+    //    const col2 = db.collection("products");
 
-        // Construct a document
-       let product1 = {
-        "reference": "Harnais",
-        "description" : "Pour le cou",
-        "prix" : "12€"
-        }
+    //    // Construct a document
+    //   let product1 = {
+    //    "reference": "Harnais",
+    //    "description" : "Pour le cou",
+    //    "prix" : "12€"
+    //    }
 
-        // Insert a product document, wait for promise so we can read it back
-        const p = await col1.insertOne(product1);
+    //    // Insert a product document, wait for promise so we can read it back
+    //    const p = await col1.insertOne(product1);
 
-        // Find one document
-        const myDoc1 = await col2.findOne();
-        // Print to the console
-        console.log(myDoc1);
+    //    // Find one document
+    //    const myDoc1 = await col2.findOne();
+    //    // Print to the console
+    //    console.log(myDoc1);
 
     }
 
